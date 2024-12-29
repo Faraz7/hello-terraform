@@ -1,5 +1,7 @@
 terraform {
-  backend "s3" {
+#remember to enable version in PROD for statefile backup
+#create state file in s3, no version eneble right now
+backend "s3" {
     bucket         = "project1-exampleapp"
     key            = "appserver/terraform.tf"
     region         = "eu-north-1"
