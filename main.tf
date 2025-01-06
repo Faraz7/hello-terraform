@@ -32,7 +32,7 @@ resource "aws_instance" "app_server" {
 
   tags = {
      server = "ExampleAppServerInstance"
-     Name= "var.instance_name-${count.index + 1}"
+     Name= "${var.instance_name}-${count.index + 1}"
   }
 }
 
